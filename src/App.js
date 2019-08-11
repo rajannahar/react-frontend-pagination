@@ -29,7 +29,10 @@ const App = () => {
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
 
   // Change page
-  const paginate = pageNumber => setCurrentPage(pageNumber);
+  const paginate = (e, pageNumber) => {
+    e.preventDefault();
+    setCurrentPage(pageNumber)
+  };
 
   return (
     <div className="container mt-5">
